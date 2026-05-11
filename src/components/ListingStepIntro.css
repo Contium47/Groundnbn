@@ -1,0 +1,53 @@
+.lsi {
+  width: 100%;
+  max-width: 1200px;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* левая часть */
+.lsi-content {
+  flex: 1;
+  max-width: 500px;
+}
+
+.lsi-step {
+  display: inline-block;
+  font-size: 14px;
+  color: #717171;
+  margin-bottom: 12px;
+}
+
+.lsi-title {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #222;
+  margin-bottom: 16px;
+}
+
+.lsi-description {
+  font-size: 16px;
+  color: #717171;
+  line-height: 1.5;
+}
+
+/* правая часть (центрируем видео) */
+.lsi-media {
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lsi-video {
+  max-width: 100%;
+  max-height: 100%;
+
+  object-fit: contain;
+}

@@ -1,0 +1,29 @@
+/* контейнер по центру */
+.structure-step {
+  display: flex;
+  flex-direction: column; /* ВАЖНО */
+  align-items: center;   /* центр по горизонтали */
+}
+
+/* grid */
+.structure-step__grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr); /* 3 колонки */
+  gap: 20px;
+
+  max-width: 600px; /* ограничиваем ширину */
+  width: 100%;
+}
+
+.structure-step__title {
+  text-align: center;
+
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 36px;
+
+  color: #222222;
+
+  margin-bottom: 32px;
+}

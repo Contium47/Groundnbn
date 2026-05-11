@@ -1,0 +1,151 @@
+.filters {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+}
+
+.filters__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.filters__container {
+  position: relative;
+  z-index: 1;
+  max-width: 500px;
+  width: 90%;
+  margin: 80px auto;
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.filters__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.filters__title {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.filters__close {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.filters__section {
+  margin-bottom: 24px;
+}
+
+.filters__subtitle {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.filters__inputs {
+  display: flex;
+  gap: 12px;
+}
+
+.filters__input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.filters__input:focus {
+  outline: none;
+  border-color: #000;
+}
+
+.filters__footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.filters__clear {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.filters__apply {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  background: #000;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* select */
+.filters__select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+/* options (кнопки фильтров) */
+.filters__options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* кнопка фильтра */
+.filters__option {
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+/* hover */
+.filters__option:hover {
+  border-color: #000;
+}
+
+.filters__option--active {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+.filters__inputs {
+  display: flex;
+  gap: 10px;
+}
+
+.filters__input {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.filters__input:focus {
+  outline: none;
+  border-color: #000;
+}

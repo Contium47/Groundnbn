@@ -1,0 +1,100 @@
+.booking-card {
+  width: 100%;
+  height: 420px; /* фиксированная высота */
+  
+  border-radius: 16px;
+  background: #fff;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.booking-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* IMAGE */
+.booking-image {
+  width: 100%;
+  height: 180px; /* фикс */
+  object-fit: cover;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+/* CONTENT */
+.booking-content {
+  flex: 1; /* занимает всё доступное */
+  padding: 12px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* распределяет блоки */
+}
+
+/* TEXT BLOCK */
+.booking-title {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* максимум 2 строки */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.booking-location {
+  font-size: 13px;
+  color: #717171;
+  margin: 0;
+}
+
+.booking-amenities {
+  font-size: 12px;
+  color: #717171;
+  margin: 0;
+}
+
+/* DATES */
+.booking-dates {
+  font-size: 13px;
+  color: #222;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+/* PRICE */
+.booking-price {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* BUTTON */
+.booking-card button {
+  height: 40px; /* фикс */
+  margin: 10px;
+  border-radius: 10px;
+  border: none;
+
+  background: #ff5a5f;
+  color: #fff;
+  font-weight: 500;
+
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.booking-card button:hover {
+  background: #e04848;
+}
+
+.booking-card button:active {
+  transform: scale(0.98);
+}

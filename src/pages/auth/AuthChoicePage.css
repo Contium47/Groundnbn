@@ -1,0 +1,72 @@
+.auth-container {
+  height: calc(100vh - 59px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f7f7f7;
+}
+
+.auth-card {
+  background: white;
+  padding: 32px;
+  border-radius: 16px;
+  width: 400px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.auth-title {
+  margin-bottom: 24px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* новый класс */
+.auth-subtitle {
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.auth-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login-action,
+.signup-action {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.auth-btn {
+  text-decoration: none;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+/* login кнопка */
+.auth-btn.primary {
+  background: #ff385c;
+  color: white;
+}
+
+.auth-btn.primary:hover {
+  background: #e03150;
+}
+
+/* signup кнопка */
+.auth-btn.secondary {
+  border: 1px solid #ddd;
+  color: #222;
+}
+
+.auth-btn.secondary:hover {
+  background: #f7f7f7;
+}

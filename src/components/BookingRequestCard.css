@@ -1,0 +1,56 @@
+/* используем твой listing-card как базу */
+
+/* даты */
+.booking-dates {
+  font-size: 14px;
+  color: #444;
+}
+
+/* цена */
+.booking-price {
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+/* кнопки */
+.booking-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.booking-actions button {
+  flex: 1;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+/* confirm */
+.confirm-btn {
+  background: #2ecc71;
+  color: white;
+}
+
+.confirm-btn:hover {
+  background: #27ae60;
+}
+
+/* reject */
+.reject-btn {
+  background: #f1f1f1;
+  color: #333;
+}
+
+.reject-btn:hover {
+  background: #e0e0e0;
+}
+
+/* клик эффект */
+.booking-actions button:active {
+  transform: scale(0.96);
+}

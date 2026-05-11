@@ -1,0 +1,47 @@
+.structure-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 100%;
+  height: 100%;
+  min-height: 88px;
+
+  padding: 16px;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  background-color: #ffffff;
+
+  cursor: pointer;
+  transition: box-shadow 0.2s ease, transform 0.1s ease;
+}
+
+/* hover эффект как у Airbnb */
+.structure-card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+.structure-card.active {
+  border-color: #222222;
+}
+
+/* иконка */
+.structure-card__icon {
+  width: 32px;
+  height: 32px;
+}
+
+/* чтобы SVG нормально вписывался */
+.structure-card__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* текст */
+.structure-card__title {
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #222222;
+}

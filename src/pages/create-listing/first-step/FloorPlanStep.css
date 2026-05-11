@@ -1,0 +1,30 @@
+/* контейнер */
+.floor {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* заголовок */
+.floor__header {
+  margin-bottom: 32px;
+}
+
+.floor__title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.floor__subtitle {
+  font-size: 16px;
+  color: #6a6a6a;
+}
+
+/* список */
+.floor__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+

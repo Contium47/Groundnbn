@@ -1,0 +1,57 @@
+.bookings {
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh; /* 👈 ВОТ ЭТО КЛЮЧ */
+}
+
+.bookings-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.bookings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.bookings-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 12px;
+}
+
+/* контейнер */
+.bookings-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* блок одного статуса */
+.booking-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* заголовок статуса */
+.booking-group-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #222;
+
+  text-transform: capitalize;
+  padding-left: 4px;
+}
+
+/* сетка карточек */
+.bookings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}

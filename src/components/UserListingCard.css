@@ -1,0 +1,32 @@
+/* контейнер для кнопки */
+.user-listing-actions {
+  padding: 12px;
+  border-top: 1px solid #eee;
+}
+
+/* кнопка удаления */
+.delete-listing-btn {
+  width: 100%;
+  padding: 10px 12px;
+
+  background-color: #ff385c; /* фирменный красный */
+  color: white;
+
+  border: none;
+  border-radius: 8px;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.delete-listing-btn:hover {
+  background-color: #e11d48;
+}
+
+.delete-listing-btn:active {
+  transform: scale(0.97);
+}

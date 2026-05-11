@@ -1,0 +1,76 @@
+/* контейнер */
+.weekend {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* верхняя часть */
+.weekend__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* текст */
+.weekend__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.weekend__title {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.weekend__tip {
+  font-size: 14px;
+  color: #6a6a6a;
+}
+
+/* значение процента */
+.weekend__value {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* слайдер */
+.weekend__slider {
+  width: 100%;
+}
+
+/* range стиль */
+.weekend__range {
+  width: 100%;
+  appearance: none;
+  height: 4px;
+  background: #ddd;
+  border-radius: 2px;
+  outline: none;
+}
+
+/* кружок */
+.weekend__range::-webkit-slider-thumb {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background: #000;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.weekend__range::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background: #000;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  background: linear-gradient(to right, black 30%, #ddd 30%);
+}
+
+.weekend-percentage {
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,47 @@
+/* элемент */
+.floor-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-bottom: 16px;
+  border-bottom: 1px solid #eee;
+}
+
+/* текст */
+.floor-item__label {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* кнопки */
+.floor-item__controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.floor-item__btn {
+  width: 32px;
+  height: 32px;
+
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  background-color: #fff;
+
+  cursor: pointer;
+  font-size: 18px;
+
+  transition: all 0.2s ease;
+}
+
+.floor-item__btn:hover {
+  border-color: #000;
+}
+
+/* значение */
+.floor-item__value {
+  min-width: 20px;
+  text-align: center;
+  font-size: 16px;
+}

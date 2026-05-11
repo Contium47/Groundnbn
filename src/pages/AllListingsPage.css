@@ -1,0 +1,6 @@
+.admin-listings {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 280px));
+  gap: 16px;
+  justify-content: start;
+}

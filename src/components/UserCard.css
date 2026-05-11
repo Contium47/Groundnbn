@@ -1,0 +1,37 @@
+.users-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.user-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.user-card__info h3 {
+  margin: 0 0 8px 0;
+}
+
+.user-card__info p {
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+.btn-delete {
+  padding: 8px 12px;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-delete:hover {
+  background: darkred;
+}

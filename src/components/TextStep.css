@@ -1,0 +1,70 @@
+/* контейнер */
+.text-step {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* обертка */
+.text-step__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* заголовок */
+.text-step__title {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+/* описание */
+.text-step__description {
+  font-size: 16px;
+  color: #6a6a6a;
+}
+
+/* textarea */
+.text-step__textarea {
+  width: 622px;
+  min-height: 140px;
+
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+
+  font-size: 16px;
+  resize: none;
+
+  transition: all 0.2s ease;
+}
+
+/* фокус как в норм приложениях */
+.text-step__textarea:focus {
+  outline: none;
+  border-color: #000;
+}
+
+/* footer */
+.text-step__footer {
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* подсказка */
+.text-step__hint {
+  font-size: 12px;
+  color: #999;
+}
+
+.text-step__error {
+    display: block;
+    margin-top: 6px;
+
+    color: #d93025; /* мягкий красный */
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.4;
+
+    letter-spacing: 0.2px;
+}

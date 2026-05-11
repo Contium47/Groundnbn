@@ -1,0 +1,46 @@
+.empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh; /* или 70vh / 100vh */
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.empty__content {
+  max-width: 400px;
+}
+
+.empty__icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.empty__title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.empty__subtitle {
+  font-size: 14px;
+  color: #717171;
+  margin-bottom: 24px;
+}
+
+.empty__btn {
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: none;
+  background-color: #ff385c;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.empty__btn:hover {
+  background-color: #e31c5f;
+}

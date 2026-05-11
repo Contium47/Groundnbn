@@ -1,0 +1,47 @@
+/* карточка */
+.privacy-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+
+  cursor: pointer;
+  background-color: #fff;
+
+  transition: all 0.2s ease;
+}
+
+/* hover эффект */
+.privacy-card:hover {
+  border-color: #000;
+  transform: scale(1.02);
+}
+
+.privacy-card.active {
+  border-color: #000;
+}
+
+/* текст */
+.privacy-card__content {
+  max-width: 70%;
+}
+
+.privacy-card__title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.privacy-card__desc {
+  font-size: 14px;
+  color: #6a6a6a;
+}
+
+/* иконка */
+.privacy-card__icon img {
+  width: 40px;
+  height: 40px;
+}

@@ -1,0 +1,64 @@
+.rooms-filter {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* строка */
+.rooms-filter__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+  border-bottom: 1px solid #ebebeb;
+}
+
+/* левая часть */
+.rooms-filter__title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #222;
+}
+
+/* кнопки справа */
+.rooms-filter__controls {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* кнопки +/- */
+.rooms-filter__btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #b0b0b0;
+  background-color: white;
+  font-size: 18px;
+  color: #222;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+/* hover как в Airbnb */
+.rooms-filter__btn:hover {
+  border-color: #222;
+}
+
+/* disabled */
+.rooms-filter__btn:disabled {
+  border-color: #ddd;
+  color: #ddd;
+  cursor: not-allowed;
+}
+
+/* значение (Any / 1+ / 2+) */
+.rooms-filter__value {
+  min-width: 36px;
+  text-align: center;
+  font-size: 16px;
+  color: #222;
+}
