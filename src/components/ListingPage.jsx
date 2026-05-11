@@ -46,12 +46,10 @@ function ListingPage({ isAuth }) {
 
   return (
     <div className="listing">
-      {/* HEADER */}
       <div className="listing__header">
         <h1 className="listing__title">{currListing.title}</h1>
       </div>
 
-      {/* PHOTOS */}
       <div className="listing__photos">
         {currListing.images.map((image, index) => (
           <img
