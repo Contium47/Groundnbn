@@ -28,9 +28,6 @@ dist-ssr
 .env
 backend/.env
 
-# Uploaded files
-backend/uploads
-
 # Build folders
 build
 
