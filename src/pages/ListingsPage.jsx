@@ -5,7 +5,7 @@ import ListingCard from "../components/ListingCard";
 import { api } from "../api/api";
 import "./ListingsPage.css";
 
-function ListingsPage({isAuth, wishlistIds, setWishlistIds}) {
+function ListingsPage({wishlistIds, setWishlistIds}) {
   const [listings, setListings] = useState([]);
   const [groupedListings, setGroupedListings] = useState([]);
 
