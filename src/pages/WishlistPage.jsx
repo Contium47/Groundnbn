@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import EmptyState from "../components/EmptyState";
 import ListingCard from "../components/ListingCard";
 import { api } from "../api/api";
+import { BACKEND_URL } from "../api/api";
 
 function WishlistPage({wishlistIds, setWishlistIds}) {
   const [wishlist, setWishlist] = useState([]);
@@ -21,7 +22,7 @@ function WishlistPage({wishlistIds, setWishlistIds}) {
       <div className="bookings-grid">
         {wishlist.length > 0 ? (
           wishlist.map((listing) => {
-            const imageUrl = `http://localhost:5000${listing.images[0]}`;
+            const imageUrl = `${BACKEND_URL}${listing.images[0]}`;
             return (
               <ListingCard
                 key={listing.id}

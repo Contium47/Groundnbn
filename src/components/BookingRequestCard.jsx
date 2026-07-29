@@ -3,6 +3,8 @@ import { useNavigate } from "react-router";
 import './BookingRequestCard.css'
 import { api } from "../api/api";
 
+import { BACKEND_URL } from "../api/api";
+
 function BookingRequestCard({ listing, setBookingRequests }) {
   const navigate = useNavigate();
   const totalDays = Math.ceil(
@@ -30,7 +32,7 @@ function BookingRequestCard({ listing, setBookingRequests }) {
       <div className="image-wrapper">
         <img
           className="listing-image"
-          src={`http://localhost:5000${listing.listing.images[0]}`}
+          src={`${BACKEND_URL}${listing.listing.images[0]}`}
           alt=""
         />
       </div>

@@ -3,6 +3,7 @@ import { PlusOutlined } from "@ant-design/icons";
 import { Upload } from "antd";
 import { useOutletContext } from "react-router";
 import { api } from '../../../api/api';
+import { BACKEND_URL } from "../api/api";
 
 function PhotosStep() {
   const { setIsStepValid, listing, setListing } = useOutletContext();
@@ -10,7 +11,7 @@ function PhotosStep() {
   const fileList = (listing.images || []).map((img, index) => ({
     name: `image-${index}`,
     status: "done",
-    url: `http://localhost:5000${img}`,
+    url: `${BACKEND_URL}${img}`,
   }));
 
   useEffect(() => {

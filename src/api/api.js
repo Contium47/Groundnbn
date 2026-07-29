@@ -4,6 +4,8 @@ export const api = axios.create({
   baseURL: import.meta.env.VITE_API_URL,
 });
 
+export const BACKEND_URL = import.meta.env.VITE_API_URL.replace("/api", "")
+
 api.interceptors.request.use(
   function (config) {
     const token = localStorage.getItem("token");

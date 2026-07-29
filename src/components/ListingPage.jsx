@@ -2,6 +2,8 @@ import { useOutletContext, useParams } from "react-router";
 import { useEffect, useState } from "react";
 import { api } from "../api/api";
 
+import { BACKEND_URL } from "../api/api";
+
 import BookingPanel from "./BookingPanel";
 import ListingReviews from "./ListingReviews";
 
@@ -55,7 +57,7 @@ function ListingPage({ isAuth }) {
           <img
             key={index}
             className="listing__photo"
-            src={`http://localhost:5000${image}`}
+            src={`${BACKEND_URL}${image}`}
             alt="listing"
           />
         ))}
