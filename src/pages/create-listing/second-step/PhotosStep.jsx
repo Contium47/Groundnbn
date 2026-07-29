@@ -3,7 +3,7 @@ import { PlusOutlined } from "@ant-design/icons";
 import { Upload } from "antd";
 import { useOutletContext } from "react-router";
 import { api } from '../../../api/api';
-import { BACKEND_URL } from "../api/api";
+import { BACKEND_URL } from "../../../api/api";
 
 function PhotosStep() {
   const { setIsStepValid, listing, setListing } = useOutletContext();
