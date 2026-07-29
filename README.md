@@ -26,6 +26,10 @@ Airbnb-style booking platform developed as a university course project.
 - CSS
 - Vite
 
+## Deploy
+
+https://groundnbn.vercel.app/
+
 ## Author
 
 Artem Hryn
