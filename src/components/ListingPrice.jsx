@@ -73,7 +73,6 @@
                         />
                     </div>
                     {errors[type] && <small className="text-step__error">{errors[type].message}</small>}
-                    {/* <p className="price__hint">Guest price before taxes ${calcPriceBeforeTaxes(listing[type])}</p> */}
                 </div>
                 <div className="price__footer">
                     {currStep === 'price' && <WeekdayPriceFooter />}

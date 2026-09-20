@@ -5,7 +5,6 @@ import "./BecomeAHostFooter.css";
 
 function BecomeAHostFooter({
   isStepValid,
-  setIsStepValid,
   listing,
   setListing,
 }) {
@@ -39,56 +38,62 @@ function BecomeAHostFooter({
 
   async function onNext() {
     if (currPage === steps[steps.length - 1]) {
-      const formData = new FormData();
+      const payload = {
+        title: listing.title,
+        description: listing.description,
 
-      formData.append("title", listing.title);
-      formData.append("description", listing.description);
+        country_name: listing.location.country,
+        city_name: listing.location.city,
+        street: listing.location.street,
+        iso2: listing.location.iso2,
 
-      formData.append("country_name", listing.location.country);
-      formData.append("city_name", listing.location.city);
-      formData.append("street", listing.location.street);
-      formData.append("iso2", listing.location.iso2);
+        guests: listing.floorPlan.guests,
+        bedrooms: listing.floorPlan.bedrooms,
+        beds: listing.floorPlan.beds,
+        bathrooms: listing.floorPlan.bathrooms,
 
-      formData.append("guests", listing.floorPlan.guests);
-      formData.append("bedrooms", listing.floorPlan.bedrooms);
-      formData.append("beds", listing.floorPlan.beds);
-      formData.append("bathrooms", listing.floorPlan.bathrooms);
+        structure: listing.structure,
+        privacy_type: listing.privacyType,
 
-      formData.append("structure", listing.structure);
-      formData.append("privacy_type", listing.privacyType);
+        weekday_price: listing.weekdayPrice,
+        weekend_price: listing.weekendPrice,
 
-      formData.append("weekday_price", listing.weekdayPrice);
-      formData.append("weekend_price", listing.weekendPrice);
+        images: listing.images || [],
+      };
 
-      formData.append('images', JSON.stringify(listing.images || []))
+      try {
+        const response = await api.post("/listings", payload);
 
-      const response = await api.post("/listings", formData);
-      console.log(response);
+        console.log(response);
 
-      navigate('/')
+        navigate("/");
 
-      setListing({
-        structure: "Barn",
-        privacyType: "An entire place",
-        floorPlan: {
-          guests: 1,
-          bedrooms: 1,
-          beds: 1,
-          bathrooms: 1,
-        },
-        photos: [],
-        images: [],
-        title: "",
-        description: "",
-        location: {
-          country: "",
-          city: "",
-          street: "",
-          iso2: '',
-        },
-        weekdayPrice: 8,
-        weekendPrice: 2,
-      });
+        setListing({
+          structure: "Barn",
+          privacyType: "An entire place",
+          floorPlan: {
+            guests: 1,
+            bedrooms: 1,
+            beds: 1,
+            bathrooms: 1,
+          },
+          photos: [],
+          images: [],
+          title: "",
+          description: "",
+          location: {
+            country: "",
+            city: "",
+            street: "",
+            iso2: "",
+          },
+          weekdayPrice: 8,
+          weekendPrice: 2,
+        });
+      } catch (err) {
+        console.error(err);
+      }
+
       return;
     }
 

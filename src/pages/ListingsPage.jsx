@@ -5,7 +5,7 @@ import ListingCard from "../components/ListingCard";
 import { api } from "../api/api";
 import "./ListingsPage.css";
 
-function ListingsPage({isAuth, wishlistIds, setWishlistIds}) {
+function ListingsPage({wishlistIds, setWishlistIds}) {
   const [listings, setListings] = useState([]);
   const [groupedListings, setGroupedListings] = useState([]);
 
@@ -52,7 +52,7 @@ function ListingsPage({isAuth, wishlistIds, setWishlistIds}) {
 
           <div className="listings-grid">
             {listings.slice(0, 4).map((listing) => {
-              const imageUrl = listing.images?.[0] ? `http://localhost:5000${listing.images[0]}` : null;
+              const imageUrl = listing.images?.[0] ? `${import.meta.env.VITE_API_URL.replace("/api", "")}${listing.images[0]}` : null;
 
               return (
                 <ListingCard key={listing.id} imageUrl={imageUrl} listing={listing} wishlistIds={wishlistIds} setWishlistIds={setWishlistIds} />

@@ -45,7 +45,7 @@ function BookingsPage() {
                         <div className="bookings-grid">
                             {bookings.map(bookingInfo => {
                                 return (
-                                    <BookingCard key={bookingInfo.id} bookingInfo={bookingInfo} />
+                                    <BookingCard key={bookingInfo.id} bookingInfo={bookingInfo} setBookingsInfo={setBookingsInfo} />
                                 )
                             })}
                         </div>

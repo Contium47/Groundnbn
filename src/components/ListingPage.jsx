@@ -2,6 +2,8 @@ import { useOutletContext, useParams } from "react-router";
 import { useEffect, useState } from "react";
 import { api } from "../api/api";
 
+import { BACKEND_URL } from "../api/api";
+
 import BookingPanel from "./BookingPanel";
 import ListingReviews from "./ListingReviews";
 
@@ -46,18 +48,16 @@ function ListingPage({ isAuth }) {
 
   return (
     <div className="listing">
-      {/* HEADER */}
       <div className="listing__header">
         <h1 className="listing__title">{currListing.title}</h1>
       </div>
 
-      {/* PHOTOS */}
       <div className="listing__photos">
         {currListing.images.map((image, index) => (
           <img
             key={index}
             className="listing__photo"
-            src={`http://localhost:5000${image}`}
+            src={`${BACKEND_URL}${image}`}
             alt="listing"
           />
         ))}

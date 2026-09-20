@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router';
 import { api } from '../api/api';
+import { BACKEND_URL } from "../api/api";
 
 import './UserListingCard.css'
 
@@ -16,7 +17,7 @@ function UserListingCard({userListing, setUserListings}) {
     return (
     <article className="listing-card" onClick={() => navigate(`/listing/${userListing.id}`)} >
       
-        <img src={`http://localhost:5000${userListing.images[0]}`} alt={userListing.title} className="listing-image" />
+        <img src={`${BACKEND_URL}${userListing.images[0]}`} alt={userListing.title} className="listing-image" />
       
 
       <div className="listing-content">

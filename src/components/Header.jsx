@@ -19,7 +19,7 @@ function Header({ isAuth, setIsAuth, isUserMenuOpen, setIsUserMenuOpen, isAdmin 
         <BurgerMenuBtn isUserMenuOpen={isUserMenuOpen} setIsUserMenuOpen={setIsUserMenuOpen} />
 
         <div className="nav-user">
-          {isAuth && <p className="nav-user__email">{userData.email}</p>}
+          {/* {isAuth && <p className="nav-user__email">{userData.email}</p>} */}
           <UserMenu setIsAuth={setIsAuth} isAuth={isAuth} isUserMenuOpen={isUserMenuOpen} setIsUserMenuOpen={setIsUserMenuOpen} isAdmin={isAdmin} />
         </div>
         </div>

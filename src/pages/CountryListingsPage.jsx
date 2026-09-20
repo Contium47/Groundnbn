@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { api } from "../api/api";
+import { BACKEND_URL } from "../api/api";
 
 import ListingCard from "../components/ListingCard";
 import FilterButton from "../components/FilterButton";
@@ -62,7 +63,7 @@ function CountryListingsPage({isFiltersOpen, setIsFiltersOpen, wishlistIds, setW
       <div className="bookings-grid">
         {filteredListings.map((listing) => {
           const imageUrl = listing.images[0]
-            ? `http://localhost:5000${listing.images[0]}`
+            ? `${BACKEND_URL}${listing.images[0]}`
             : null;
           return (
             <ListingCard

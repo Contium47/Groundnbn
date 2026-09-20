@@ -2,6 +2,7 @@ import { useNavigate } from "react-router";
 import './BookingCard.css'
 import { api } from "../api/api";
 
+import { BACKEND_URL } from "../api/api";
 
 function BookingCard({ bookingInfo, setBookingsInfo }) {
     const navigate = useNavigate();
@@ -21,7 +22,7 @@ function BookingCard({ bookingInfo, setBookingsInfo }) {
         <img src={imageUrl} alt={listing.title} className="listing-image" />
       )} */}
 
-      <img className="booking-image" src={`http://localhost:5000${bookingInfo.listing.images[0]}`} alt="" />
+      <img className="booking-image" src={`${BACKEND_URL}${bookingInfo.listing.images[0]}`} alt="" />
 
       <div className="booking-content">
         <h3 className="booking-title">{bookingInfo.listing.title}</h3>
