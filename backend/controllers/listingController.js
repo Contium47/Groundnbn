@@ -93,7 +93,7 @@ exports.getListingById = async (req, res) => {
 
       GROUP BY l.id, u.id, r.avg_rating, r.reviews_count
       `,
-      [id]
+      [id],
     );
 
     if (!result.rows.length) {
@@ -136,7 +136,7 @@ exports.getMyListings = async (req, res) => {
       GROUP BY l.id, r.avg_rating, r.reviews_count
       ORDER BY l.id DESC
       `,
-      [req.user.userId]
+      [req.user.userId],
     );
 
     res.json(result.rows.map(formatListing));
@@ -180,7 +180,7 @@ exports.getListingsByCountry = async (req, res) => {
       GROUP BY l.id, u.id, r.avg_rating, r.reviews_count
       ORDER BY l.id DESC
       `,
-      [req.params.iso2]
+      [req.params.iso2],
     );
 
     res.json(result.rows.map(formatListing));
@@ -238,18 +238,16 @@ exports.createListing = async (req, res) => {
         privacy_type,
         weekday_price,
         weekend_price,
-      ]
+      ],
     );
 
     const listing = result.rows[0];
 
-    if (images) {
-      const parsed = JSON.parse(images);
-
-      for (const img of parsed) {
+    if (images?.length) {
+      for (const img of images) {
         await pool.query(
-          `INSERT INTO listing_image (url, listingid) VALUES ($1,$2)`,
-          [img, listing.id]
+          `insert into listing_image (url, listingid) values ($1, $2)`,
+          [img, listing.id],
         );
       }
     }
@@ -265,28 +263,23 @@ exports.deleteListing = async (req, res) => {
   try {
     const { id } = req.params;
 
-    const result = await pool.query(
-      'select * from listing where id = $1',
-      [id]
-    );
+    const result = await pool.query("select * from listing where id = $1", [
+      id,
+    ]);
 
     if (!result.rows.length) {
-      return res.status(404).json({ error: 'Not found' });
+      return res.status(404).json({ error: "Not found" });
     }
 
     const listing = result.rows[0];
 
-    if (
-      req.user.role !== 'admin' &&
-      listing.userid !== req.user.userId
-    ) {
-      return res.status(403).json({ error: 'Немає доступу' });
+    if (req.user.role !== "admin" && listing.userid !== req.user.userId) {
+      return res.status(403).json({ error: "Немає доступу" });
     }
 
-    await pool.query('delete from listing where id = $1', [id]);
+    await pool.query("delete from listing where id = $1", [id]);
 
-    res.json({ message: 'Оголошення видалено' });
-
+    res.json({ message: "Оголошення видалено" });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
